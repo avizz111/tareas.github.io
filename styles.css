@@ -1,0 +1,85 @@
+:root {
+    --bg: #1e022e;
+    --card: #14011fda;
+    --accent: #2b7a78
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Arial;
+    color: #e3e7ee;
+    /*font-family: fa;
+    font-size: small;
+    font-weight: 100;*/
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center
+}
+
+.app {
+    width: 80vw;
+    max-width: 480px;
+    padding: 24px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+    outline: #000 solid 2px;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e3e7ee;
+    border-radius: 8px;
+    color:#000
+}
+
+button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #f0f2f5
+}
+
+li .left {
+    display: flex;
+    max-width: 10%;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #9aa3ad
+}
+
+.clear {
+    margin-top: 12px;
+    background: #e74c3c
+}
