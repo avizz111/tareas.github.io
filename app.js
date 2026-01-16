@@ -3,12 +3,8 @@ const input = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const list = document.getElementById('taskList');
 const clearBtn = document.getElementById('clearBtn');
-const modalBorrar = document.getElementById('modalBorrar');
-const Borrar = document.getElementById('Borrar');
-const app = document.getElementById('app');
 
 let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-let segure;
 
 // Renderiza la lista
 function render() {
@@ -59,26 +55,11 @@ list.addEventListener('click', (e) => {
   }
 });
 
-// Abrir ventana para borrar
-clearBtn.addEventListener('click', () => {
-  //if (!confirm('Borrar todas las tareas?')) return;
-  modalBorrar.style.display = "block";
-  app.style.display = "none";
-
-});
-
 // Borrar todo
-Borrar.addEventListener('click', () => {
+clearBtn.addEventListener('click', () => {
+  if (!confirm('Borrar todas las tareas?')) return;
   tasks = []; save(); render();
-  cerrar()
 });
-
-// cerrar modal
-const cerrar = () => {
-  modalBorrar.style.display = "none";
-  app.style.display = "block";
-}
-
 
 // Escape para evitar inyección
 function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
