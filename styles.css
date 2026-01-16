@@ -22,7 +22,7 @@ body {
     justify-content: center
 }
 
-.app {
+#app {
     width: 80vw;
     max-width: 480px;
     padding: 24px;
@@ -52,7 +52,7 @@ button {
     border-radius: 8px;
     background: var(--accent);
     color: #fff;
-    cursor: pointer
+    cursor: pointer;
 }
 
 ul {
@@ -82,4 +82,18 @@ li.completed span {
 .clear {
     margin-top: 12px;
     background: #e74c3c
+}
+
+#modalBorrar{
+    display: none;
+    transform: all 1s;
+    padding: 0;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+    outline: #000 solid 2px;
+}
+
+#modalBorrar > *{
+    margin: 20px;
 }
